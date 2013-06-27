@@ -3,6 +3,7 @@
 
 #include <ostream>
 #include <istream>
+#include <string>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ public:
 private:
 	Suit suit_;
 	Rank rank_;
-	static const string rankNames[] = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+	static const string rankNames[];
 };
 
 bool operator==(const Card &, const Card &);
