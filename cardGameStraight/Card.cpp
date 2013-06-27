@@ -1,8 +1,8 @@
 #include "Card.h"
-#include <string>
 #include <cassert>
 using namespace std;
 
+const string Card::rankNames[13] = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
 Card::Card(Suit s, Rank r){
 	suit_ = s;
 	rank_ = r;
@@ -55,13 +55,13 @@ istream &operator>>(istream &in, Card &c){
 }
 
 string Card::convertSuitToString(){
-	if(rank_ == SPADE)
+	if(suit_ == SPADE)
 		return "S";
-	else if(rank_ == HEART)
+	else if(suit_ == HEART)
 		return "H";
-	else if(rank_ == CLUB)
+	else if(suit_ == CLUB)
 		return "C";
-	else if(rank_ == DIAMOND)
+	else if(suit_ == DIAMOND)
 		return "D";
 	else
 		throw "Convert String Error";
